@@ -13,7 +13,8 @@ h1 {
 	font-size: 24pt;
 	margin: 10px}
 article { background: pink;
-		  color: blue;}
+		  color: blue;
+		  padding-left: 10px;}
 legend {
 	text-align: center;}
 fieldset {
