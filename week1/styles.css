@@ -5,7 +5,7 @@ Project 2 stylesheet
 */
 
 body {
-	background-color: green;
+	background-color: brown;
 	color: #F2EDC8; 
 	font:italic bold 18px/30px chalkboard;}
 h1 {
@@ -13,27 +13,30 @@ h1 {
 	font-size: 24pt;
 	margin: 10px}
 article { background: white;
-		  color: blue;
-	}
+		  color: blue;}
 legend {
 	text-align: center;}
 fieldset {
 	margin: 20px 0px 40px -20px;
 	border: 0}
-#brClass {
-	margin-bottom: 40px;
-	padding: 5px 200px 5px 2px;
-	border: 1px solid black
-}
-#brAssign {
-	padding: 5px 153px 5px 2px;
-	border: 1px solid black
-}
-#brTeacher {
-	
-}
-#brDueDate {
-
+nav ul {
+	background-color: blue ;
+	color: white;
+	margin: 0px;
+	padding: 5px 0px 5px 0px;}
+nav ul li {
+	background-color: grey;
+	color: black;
+	margin: 10px;
+	height: 30px;
+	border: 5px outset #F00}
+nav ul li a {
+	display: block;
+	height: 30px;
+	text-decoration: none;
+	text-align: center;}
+nav ul li a:hover {
+	background-color: white;
 }
 #clname {
 	display: block;}
@@ -52,13 +55,9 @@ fieldset {
 li {
 	font-size: 12pt;}
 ul, li{
-	list-style-type: none;
-	margin-left: 0px;
-	padding-left: 0px;}
+	list-style-type: none;}
 a {
 	color: orange;}
-a:hover {
-	color: white;}
 #errors {
 	color: red;
 	text-align: center;}
