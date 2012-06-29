@@ -5,22 +5,23 @@ Project 2 stylesheet
 */
 
 body {
-	background-color: brown;
-	color: #F2EDC8; 
+	background-color: #0069ff;
+	color: #f2f986; 
 	font:italic bold 18px/30px chalkboard;}
 h1 {
 	text-align: center;
 	font-size: 24pt;
 	margin: 10px}
-article { background: white;
-		  color: blue;}
+article { background: pink;
+		  color: blue;
+		  display: block;}
 legend {
 	text-align: center;}
 fieldset {
 	margin: 20px 0px 40px -20px;
 	border: 0}
 nav ul {
-	background-color: blue ;
+	background-color: #ed1c24;
 	color: white;
 	margin: 0px;
 	padding: 5px 0px 5px 0px;}
@@ -29,7 +30,7 @@ nav ul li {
 	color: black;
 	margin: 10px;
 	height: 30px;
-	border: 5px outset #F00}
+	border: 5px outset #0069ff}
 nav ul li a {
 	display: block;
 	height: 30px;
@@ -55,7 +56,9 @@ nav ul li a:hover {
 li {
 	font-size: 12pt;}
 ul, li{
-	list-style-type: none;}
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;}
 a {
 	color: orange;}
 #errors {
