@@ -6,14 +6,14 @@ Project 2 stylesheet
 
 body {
 	background-color: #0069ff;
-	color: #f2f986; 
+	color: #ffea00; 
 	font:italic bold 18px/30px chalkboard;}
 h1 {
 	text-align: center;
 	font-size: 24pt;
 	margin: 10px}
-article { background: pink;
-		  color: blue;
+article { background: #ffea00;
+		  color: #0069ff;
 		  padding-left: 10px;}
 article p {
 	padding-top: 10px;}
@@ -23,7 +23,7 @@ fieldset {
 	margin: 20px 0px 40px -20px;
 	border: 0}
 nav ul {
-	background-color: #ed1c24;
+	background-color: #ffea00;
 	color: white;
 	margin: 0px;
 	padding: 5px 0px 5px 0px;}
@@ -90,7 +90,7 @@ ul, li{
 	margin: 0px;
 	padding: 0px;}
 a {
-	color: orange;}
+	color: #ffea00;}
 #errors {
 	color: red;
 	text-align: center;}
