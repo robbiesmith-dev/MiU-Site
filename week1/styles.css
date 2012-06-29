@@ -15,6 +15,8 @@ h1 {
 article { background: pink;
 		  color: blue;
 		  padding-left: 10px;}
+article p {
+	padding-top: 10px;}
 legend {
 	text-align: center;}
 fieldset {
@@ -37,8 +39,36 @@ nav ul li a {
 	text-decoration: none;
 	text-align: center;}
 nav ul li a:hover {
-	background-color: white;
-}
+	background-color: white;}
+.button {
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#008deb), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #008deb, #65a9d7);
+   background: -moz-linear-gradient(top, #008deb, #65a9d7);
+   background: -ms-linear-gradient(top, #008deb, #65a9d7);
+   background: -o-linear-gradient(top, #008deb, #65a9d7);
+   padding: 3.5px 7px;
+   -webkit-border-radius: 40px;
+   -moz-border-radius: 40px;
+   border-radius: 40px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 12px;
+   font-family: Georgia, Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   margin-bottom: 20px;}
+.button:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;}
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;}
 #clname {
 	display: block;}
 #asname {
