@@ -5,20 +5,36 @@ Project 2 stylesheet
 */
 
 body {
-	background: url(http://www.dancetones.org/images/chalkboard.jpg);
+	background-color: green;
 	color: #F2EDC8; 
 	font:italic bold 18px/30px chalkboard;}
 h1 {
 	text-align: center;
 	font-size: 24pt;
 	margin: 10px}
-p { 
-	text-align: center;}
+article { background: white;
+		  color: blue;
+	}
 legend {
 	text-align: center;}
 fieldset {
 	margin: 20px 0px 40px -20px;
 	border: 0}
+#brClass {
+	margin-bottom: 40px;
+	padding: 5px 200px 5px 2px;
+	border: 1px solid black
+}
+#brAssign {
+	padding: 5px 153px 5px 2px;
+	border: 1px solid black
+}
+#brTeacher {
+	
+}
+#brDueDate {
+
+}
 #clname {
 	display: block;}
 #asname {
@@ -43,8 +59,6 @@ a {
 	color: orange;}
 a:hover {
 	color: white;}
-footer {
-	text-align: center;}
 #errors {
 	color: red;
 	text-align: center;}
