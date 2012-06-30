@@ -39,7 +39,7 @@ nav ul li a {
 	text-decoration: none;
 	text-align: center;}
 nav ul li a:hover {
-	background-color: white;}
+	background-color: orange;}
 .button {
    border-top: 1px solid #96d1f8;
    background: #65a9d7;
