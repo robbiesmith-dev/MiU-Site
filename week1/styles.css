@@ -69,6 +69,8 @@ nav ul li a:hover {
 .button:active {
    border-top-color: #1b435e;
    background: #1b435e;}
+div .button {
+	margin-top: 18px;}
 #clname {
 	display: block;}
 #asname {
