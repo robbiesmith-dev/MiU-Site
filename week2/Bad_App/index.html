@@ -16,7 +16,7 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css2/style.css"/>
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -31,10 +31,27 @@
 		</div>
 
 		<div data-role="content">
-			<p><a href="#addData" data-role="button" data-icon="arrow-r" data-iconpos="right">Add Assignment</a></p>
-			<p><a href="#browse" data-role="button" data-icon="arrow-r" data-iconpos="right">Browse Saved Assignments</a></p>
-			<p><a href="#edit" data-role="button" data-icon="arrow-r" data-iconpos="right">Edit Saved Assignments</a></p>
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><img src="images/homework2.png"/></div>
+				<div class="ui-block-b"><h2>Keep Track of All Your Assignments, Tests, and Due Dates</h2></div>
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Add Assignment</h3>
 
+					<a href="additem.html" data-role="button" data-icon="arrow-r" data-iconpos="right" data-ajax="false">Add New Assignment</a>
+					<a href="#edit" data-role="button" data-icon="arrow-r" data-iconpos="right">Edit Saved Assignment</a>
+
+			</div>
+			<div data-role="collapsible" data-collapsed="true">
+				<h3>Browse Saved Assignments</h3>
+					<ul>
+						<li><a href="#clname" data-role="button" data-icon="arrow-r" data-iconpos="right">Class Name</a></li>
+						<li><a href="#asname" data-role="button" data-icon="arrow-r" data-iconpos="right">Assignment Name</a></li>
+						<li><a href="#inname" data-role="button" data-icon="arrow-r" data-iconpos="right">Instructor</a></li>
+						<li><a href="#duedate" data-role="button" data-icon="arrow-r" data-iconpos="right">Due Date</a></li>
+						<li><a href="#viewall" data-role="button" data-icon="arrow-r" data-iconpos="right">View All Saved Assignments</a></li>
+					</ul>
+			</div>
 		</div>
 
 		<div data-role="footer" data-position="fixed">
@@ -57,36 +74,6 @@
 
 		<div data-role="content">
 			<p>Content<p>
-		</div>
-
-		<div data-role="footer" data-position="fixed">
-			<div data-role="navbar">
-				<ul>
-					<li><a href="#home" data-icon="home">Home</a></li>
-					<li><a href="#home" data-icon="search">Search</a></li>
-					<li><a href="#home" data-icon="info">Info</a></li>
-				</ul>
-			</div>
-		</div>
-
-	</div>
-	<!-- Browse Page -->
-	<div data-role="page" id="browse" data-add-back-btn="true">
-
-		<div data-role="header" data-postion="fixed">
-			<h1>Browse</h1>
-		</div>
-
-		<div data-role="content">
-			<div>
-				<ul data-role="listview">
-					<li><a href="#clname">Class Name</a></li>
-					<li><a href="#asname">Assignment Name</a></li>
-					<li><a href="#inname">Instuctor Name</a></li>
-					<li><a href="#duedate">Due Date</a></li>
-					<li><a href="#viewall">View All Saved Assignments</a></li>
-				</ul>
-			</div>
 		</div>
 
 		<div data-role="footer" data-position="fixed">
@@ -232,9 +219,8 @@
 		</div>
 
 	</div>
-
-
 	<!-- JavaScript under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>

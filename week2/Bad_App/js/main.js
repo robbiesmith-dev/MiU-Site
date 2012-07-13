@@ -122,7 +122,7 @@ function getImage(imgName, makeSublist){
 	var imageLi = document.createElement('li');
 	makeSublist.appendChild(imageLi);
 	var newImage = document.createElement('img');
-	var setSrc = newImage.setAttribute("src", "images2/"+ imgName + ".png");
+	var setSrc = newImage.setAttribute("src", "images/"+ imgName + ".png");
 	imageLi.appendChild(newImage);
 };
 
