@@ -1,5 +1,5 @@
-//Project 3
-//VFW 1206
+//Project 2
+//MiU 1207
 //Robert Smith
 
 window.addEventListener("DOMContentLoaded", function() {
