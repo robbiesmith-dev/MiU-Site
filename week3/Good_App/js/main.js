@@ -1,7 +1,8 @@
 //Project 2
 //MiU 1207
 //Robert Smith
-
+ 
+ $(document).bind('pageinit')
 window.addEventListener("DOMContentLoaded", function() {
 
 //get element shortcut
