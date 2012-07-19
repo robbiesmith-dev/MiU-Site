@@ -105,8 +105,8 @@
 				</div>
 
 				<div data-role="fieldcontain"
-					<label for="insname">Instructor: </label>
-					<input type="text" name="insname" id="insname"/>
+					<label for="insemail">Instructor E-mail: </label>
+					<input type="text" name="insemail" id="insemail"/>
 				</div>
 
 				<div data-role="fieldcontain">
@@ -119,7 +119,7 @@
 					<legend>Due Date:</legend>
 
     					<label for="select-choice-month">Month</label>
-						<select name="select-choice-month" id="select-choice-month">
+						<select name="select-choice-month" id="select-choice-month" data-native-menu="false">
 							<option>Month</option>
 							<option value="jan">January</option>
 							<option value="feb">Febuary</option>
@@ -136,7 +136,7 @@
 						</select>
 
 						<label for="select-choice-day">Day</label>
-						<select name="select-choice-day" id="select-choice-day">
+						<select name="select-choice-day" id="select-choice-day" data-native-menu="false">
 							
 							<option>Day</option>
 							<option value="1">1</option>
@@ -174,7 +174,7 @@
 						</select>
 
 						<label for="select-choice-year">Year</label>
-						<select name="select-choice-year" id="select-choice-year">
+						<select name="select-choice-year" id="select-choice-year" data-native-menu="false">
 							
 							<option>Year</option>
 							<option value="2012">2012</option>
@@ -202,7 +202,10 @@
 					<textarea></textarea>
 				</div>
 
-
+				<div data-role="fieldcontain">
+					<input type="submit" value="Add Assignment" data-theme="b"/>
+					<input type="reset" value="Clear All" data-theme="a"/>
+				</div>
 			</form>
 		</div>
 
@@ -516,6 +519,7 @@
 	<!-- JavaScript under here -->
 	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 
 </body>
