@@ -41,7 +41,7 @@
 			<div>
 				<ul data-role="listview">
 					<li>
-						<a href="#addData" data-ajax="false">
+						<a href="#addData">
 							<img src="images/add.png"/>
 							<h3>Add An Assignment</h3>
 							<p>Add a New Assignment or Test<p>
@@ -96,17 +96,17 @@
 
 				<div data-role="fieldcontain">
 					<label for="classname">Class: </label>
-					<input type="text" name="classname" id="classname" class="required"/>
+					<input type="text" name="classname" id="classname" placeholder="Class Name" class="required"/>
 				</div>
 				
 				<div data-role="fieldcontain"
 					<label for="assignmentname">Assignment: </label>
-					<input type="text" name="assignmentname" id="assignmentname" class="required"/>
+					<input type="text" name="assignmentname" id="assignmentname" placeholder="Assignment Name" class="required"/>
 				</div>
 
 				<div data-role="fieldcontain"
 					<label for="insemail">Instructor E-mail: </label>
-					<input type="text" name="insemail" id="insemail" class="required email"/>
+					<input type="text" name="insemail" id="insemail" placeholder="example@example.com" class="required email"/>
 				</div>
 
 				<div data-role="fieldcontain">
@@ -199,7 +199,7 @@
 
 				<div data-role="fieldcontain">
 					<label for="notes">Notes: </label>
-					<textarea></textarea>
+					<textarea placeholder="Add Your Notes Here!"></textarea>
 				</div>
 
 				<div data-role="fieldcontain">
