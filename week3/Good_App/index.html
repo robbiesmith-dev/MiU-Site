@@ -19,7 +19,7 @@
 	
 	<!-- StyleSheets under here -->
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<link rel="stylesheet" href="css2/style.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
 	
 	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 	<script src="js/libs/modernizr.custom.min.js"></script>
@@ -84,7 +84,7 @@
 		</div>
 
 		<div data-role="content">
-			<form action="" method="post" id="addassignmentform">
+			<form action="#addData" method="post" id="addassignmentform">
 				
 				<div data-role="fieldcontain">
 					<label for="group">Group Assignment? </label>
@@ -96,17 +96,17 @@
 
 				<div data-role="fieldcontain">
 					<label for="classname">Class: </label>
-					<input type="text" name="classname" id="classname"/>
+					<input type="text" name="classname" id="classname" class="required"/>
 				</div>
 				
 				<div data-role="fieldcontain"
 					<label for="assignmentname">Assignment: </label>
-					<input type="text" name="assignmentname" id="assignmentname"/>
+					<input type="text" name="assignmentname" id="assignmentname" class="required"/>
 				</div>
 
 				<div data-role="fieldcontain"
 					<label for="insemail">Instructor E-mail: </label>
-					<input type="text" name="insemail" id="insemail"/>
+					<input type="text" name="insemail" id="insemail" class="required email"/>
 				</div>
 
 				<div data-role="fieldcontain">
@@ -420,7 +420,45 @@
 		</div>
 
 		<div data-role="content">
-			<p>Content<p>
+			<div>
+				<ul data-role="listview" data-filter="true">
+					<li>
+						<a href="#clname">
+							<img src="images/Desk.png"/>
+							<h3>Class Name</h3>
+							<p>Browse Assignments by Class<p>
+						</a>
+					</li>
+					<li>
+						<a href="#asname">
+							<img src="images/paper.png"/>
+							<h3>Assignment Name</h3>
+							<p>Browse Assignments by Name<p>
+						</a>
+					</li>
+					<li>
+						<a href="#inname">
+							<img src="images/teacher.png"/>
+							<h3>Instructor Name</h3>
+							<p>Browse Assignments by Instructor<p>
+						</a>
+					</li>
+					<li>
+						<a href="#duedate">
+							<img src="images/cal.png"/>
+							<h3>Due Date</h3>
+							<p>Browse Assignments by Deadline<p>
+						</a>
+					</li>
+					<li>
+						<a href="#viewall">
+							<img src="images/viewall.png"/>
+							<h3>View All</h3>
+							<p>View All Saved Assignments<p>
+						</a>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 		<div data-role="footer" data-position="fixed">
