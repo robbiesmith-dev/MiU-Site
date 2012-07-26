@@ -1,0 +1,564 @@
+<!doctype html>
+<!--Robert Smith -->
+<!--MiU 1207 -->
+<!--Project 2 -->  
+<html lang="en">
+<head>
+
+	<meta charset="utf-8">
+	
+	<title>Mobile Site Template</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	<meta http-equiv="cleartype" content="on">
+	
+	<!-- StyleSheets under here -->
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<link rel="stylesheet" href="css/style.css"/>
+	
+	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr.custom.min.js"></script>
+
+</head>
+<body>
+	<!-- Home Page -->
+	<div data-role="page" id="home">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Assignment Tracker</h1>
+		</div>
+
+		<div data-role="content">
+			<div class="ui-grid-a">
+				<div class="ui-block-a"><img src="images/homework2.png"/></div>
+				<div class="ui-block-b"><h2>Keep Track of All Your Assignments, Tests, and Due Dates</h2></div>
+			</div>
+			<div>
+				<ul data-role="listview">
+					<li>
+						<a href="#addData">
+							<img src="images/add.png"/>
+							<h3>Add An Assignment</h3>
+							<p>Add a New Assignment or Test<p>
+						</a>
+					</li>
+					<li>
+						<a href="#browse">
+							<img src="images/browse.png"/>
+							<h3>Browse Saved Assignments</h3>
+							<p>Review Previously Saved Assignments or Tests<p>
+						</a>
+					</li>
+					<li>
+						<a href="#edit">
+							<img src="images/edit.png"/>
+							<h3>Edit Saved Assignments</h3>
+							<p>Edit A Previously Saved Assignment or Test<p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home" class="ui-btn-active">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Add Asignment Page -->
+	<div data-role="page" id="addData" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Add An Assignment</h1>
+		</div>
+
+		<div data-role="content">
+			<form action="#home" method="post" id="addassignmentform">
+				
+				<div data-role="fieldcontain">
+					<label for="group">Group Assignment? </label>
+					<select data-role="slider" name="group" id="group">
+						<option value="off">No</option>
+						<option value="on">Yes</option>
+					</select>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="classname">Class: </label>
+					<input type="text" name="classname" id="classname" placeholder="Class Name" class="required"/>
+				</div>
+				
+				<div data-role="fieldcontain"
+					<label for="assignmentname">Assignment: </label>
+					<input type="text" name="assignmentname" id="assignmentname" placeholder="Assignment Name" class="required"/>
+				</div>
+
+				<div data-role="fieldcontain"
+					<label for="insemail">Instructor E-mail: </label>
+					<input type="text" name="insemail" id="insemail" placeholder="example@example.com" class="required email"/>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="priority">Priority: </label>
+					<input type="range" name="priority" id="priority" value="0" min="0" max="100"/>
+				</div>
+
+				<div data-role="fieldcontain">
+				<fieldset data-role="controlgroup" data-type="horizontal">
+					<legend>Due Date:</legend>
+
+    					<label for="select-choice-month">Month</label>
+						<select name="select-choice-month" id="select-choice-month" data-native-menu="false">
+							
+							<option value="jan">January</option>
+							<option value="feb">Febuary</option>
+							<option value="mar">March</option>
+							<option value="apr">April</option>
+							<option value="may">May</option>
+							<option value="Jun">June</option>
+							<option value="jul">July</option>
+							<option value="aug">August</option>
+							<option value="sep">September</option>
+							<option value="oct">October</option>
+							<option value="noc">November</option>
+							<option value="dec">December</option>
+						</select>
+
+						<label for="select-choice-day">Day</label>
+						<select name="select-choice-day" id="select-choice-day" data-native-menu="false">
+							
+							
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+							<option value="13">13</option>
+							<option value="14">14</option>
+							<option value="15">15</option>
+							<option value="16">16</option>
+							<option value="17">17</option>
+							<option value="18">18</option>
+							<option value="19">19</option>
+							<option value="20">20</option>
+							<option value="21">21</option>
+							<option value="22">22</option>
+							<option value="23">23</option>
+							<option value="24">24</option>
+							<option value="25">25</option>
+							<option value="26">26</option>
+							<option value="27">27</option>
+							<option value="28">28</option>
+							<option value="29">29</option>
+							<option value="30">30</option>
+							<option value="31">31</option>
+
+						</select>
+
+						<label for="select-choice-year">Year</label>
+						<select name="select-choice-year" id="select-choice-year" data-native-menu="false">
+							
+							
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+						
+						</select>
+				</fieldset>
+				</div>
+
+				<div data-role="fieldcontain">
+					<fieldset data-role="controlgroup">
+						<legend>Set Reminders:</legend>
+						<input type="checkbox" value="TwoDaysPrior" name="reminder" id="reminder-1"/>
+						<label for="reminder-1">Two Days Prior</label>
+						<input type="checkbox" value="OneDayPrior" name="reminder" id="reminder-2"/>
+						<label for="reminder-2">One Day Prior</label>
+						<input type="checkbox" value="DayOf" name="reminder" id="reminder-3"/>
+						<label for="reminder-3">Day Of</label>
+					</fieldset>
+				</div>
+
+				<div data-role="fieldcontain">
+					<label for="notes">Notes: </label>
+					<textarea placeholder="Add Your Notes Here!"></textarea>
+				</div>
+
+				<div data-role="fieldcontain">
+					<input type="submit" value="Add Assignment" data-theme="b"/>
+					<input type="reset" value="Clear All" data-theme="a"/>
+				</div>
+			</form>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Browse Page -->
+	<div data-role="page" id="browse" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Browse</h1>
+		</div>
+
+		<div data-role="content">
+			<div>
+				<ul data-role="listview">
+					<li>
+						<a href="#clname">
+							<img src="images/Desk.png"/>
+							<h3>Class Name</h3>
+							<p>Browse Assignments by Class<p>
+						</a>
+					</li>
+					<li>
+						<a href="#asname">
+							<img src="images/paper.png"/>
+							<h3>Assignment Name</h3>
+							<p>Browse Assignments by Name<p>
+						</a>
+					</li>
+					<li>
+						<a href="#inname">
+							<img src="images/teacher.png"/>
+							<h3>Instructor Name</h3>
+							<p>Browse Assignments by Instructor<p>
+						</a>
+					</li>
+					<li>
+						<a href="#duedate">
+							<img src="images/cal.png"/>
+							<h3>Due Date</h3>
+							<p>Browse Assignments by Deadline<p>
+						</a>
+					</li>
+					<li>
+						<a href="#viewall">
+							<img src="images/viewall.png"/>
+							<h3>View All</h3>
+							<p>View All Saved Assignments<p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Edit Page -->
+	<div data-role="page" id="edit" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Edit An Assignment</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Content<p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Browse By Class -->
+	<div data-role="page" id="clname" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Browse Classes</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Content<p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Browse Assignment Name -->
+	<div data-role="page" id="asname" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Browse Assignment By Name</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Content<p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Browse Instructors -->
+	<div data-role="page" id="inname" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Browse Instuctors</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Content<p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#seach" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Browse Due Dates -->
+	<div data-role="page" id="duedate" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Browse By Due Date</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Content<p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- View All -->
+	<div data-role="page" id="viewall" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Saved Assignments</h1>
+		</div>
+
+		<div data-role="content">
+			<p>Content<p>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Search -->
+	<div data-role="page" id="search" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Search</h1>
+		</div>
+
+		<div data-role="content">
+			<div>
+				<ul data-role="listview" data-filter="true">
+					<li>
+						<a href="#clname">
+							<img src="images/Desk.png"/>
+							<h3>Class Name</h3>
+							<p>Browse Assignments by Class<p>
+						</a>
+					</li>
+					<li>
+						<a href="#asname">
+							<img src="images/paper.png"/>
+							<h3>Assignment Name</h3>
+							<p>Browse Assignments by Name<p>
+						</a>
+					</li>
+					<li>
+						<a href="#inname">
+							<img src="images/teacher.png"/>
+							<h3>Instructor Name</h3>
+							<p>Browse Assignments by Instructor<p>
+						</a>
+					</li>
+					<li>
+						<a href="#duedate">
+							<img src="images/cal.png"/>
+							<h3>Due Date</h3>
+							<p>Browse Assignments by Deadline<p>
+						</a>
+					</li>
+					<li>
+						<a href="#viewall">
+							<img src="images/viewall.png"/>
+							<h3>View All</h3>
+							<p>View All Saved Assignments<p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search" class="ui-btn-active">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- Info -->
+	<div data-role="page" id="info" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>Info</h1>
+		</div>
+
+		<div data-role="content">
+			<div>
+				<ul data-role="listview">
+					<li>
+						<a href="http://r2theob23.github.com/MiU-Site/week3/Good_App/" data-ajax="false">
+							<img src="images/good.png"/>
+							<h3>Good App</h3>
+							<p>Good App GH-Pages Link<p>
+						</a>
+					</li>
+					<li>
+						<a href="http://r2theob23.github.com/MiU-Site/week3/Bad_App/" data-ajax="false">
+							<img src="images/bad.png"/>
+							<h3>Bad App</h3>
+							<p>Bad App GH-Pages link<p>
+						</a>
+					</li>
+					<li>
+						<a href="#news">
+							<img src="images/news.png"/>
+							<h3>News Stream</h3>
+							<p>View the Lastest in Current Events<p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info" class="ui-btn-active">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+	<!-- News -->
+	<div data-role="page" id="news" data-add-back-btn="true">
+
+		<div data-role="header" data-postion="fixed">
+			<h1>News</h1>
+		</div>
+
+		<div data-role="content">
+			<ul data-role="listview">
+				<li>Yahoo hacked, 450,000 passwords posted 10:20 PM</li>
+				<li>Politicians can't speak at NYC 9/11 event 10:18 PM</li>
+				<li>Witnesses tell FBI George Zimmerman no racist 10:16 PM</li>
+				<li>Son: Iranian dad detained for my Facebooking 10:14 PM</li>
+				<li>186-mph joyride caught on tape, by joyrider 10:12 PM</li>
+				<li>Father held in deaths of 3 young daughters 10:10 PM</li>
+				<li>Man accidentally kills 40,000-sq-ft lawn 10:08 PM</li>
+				<li>Statement: Jackson treated for mood disorder 10:06 PM</li>
+				<li>Chimpanzees get loose in Las Vegas 10:04 PM</li>
+				<li>Penn State review recasts story of Paterno 10:02 PM</li>
+				<li>9/11, O.J. verdict top TV moments survey 10:00 PM</li>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="#search" data-icon="search">Search</a></li>
+					<li><a href="#info" data-icon="info">Info</a></li>
+				</ul>
+			</div>
+		</div>
+
+	</div>
+
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
